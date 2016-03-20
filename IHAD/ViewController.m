@@ -8,14 +8,25 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource>
+{
 
+    UITableView *_tableView;
+
+}
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    
+    [self.view addSubview:_tableView];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
